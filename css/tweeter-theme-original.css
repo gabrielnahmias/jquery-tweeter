@@ -1,0 +1,91 @@
+div#tweeter-box {
+	
+	background: #333333;
+	
+	border: none;
+	
+	border-radius: 5px;
+	
+	-moz-border-radius: 5px;
+	
+	-webkit-border-radius: 5px;
+	
+	-o-border-radius: 5px;
+	
+	-ms-border-radius: 5px;
+	
+	-khtml-border-radius: 5px;
+	
+	color: #FFFFFF;
+	
+	font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif;
+	
+}
+	
+	div#tweeter-box a.name {
+		
+		color: white;
+		
+		font-weight: normal;
+		
+	}
+	
+	div#tweeter-box div#tweets {
+		
+		background: #000000;
+		
+		border-radius: 5px;
+		
+		-moz-border-radius: 5px;
+		
+		-webkit-border-radius: 5px;
+		
+		-o-border-radius: 5px;
+		
+		-ms-border-radius: 5px;
+		
+		-khtml-border-radius: 5px;
+		
+		line-height: normal;
+		
+		margin: 10px 1px;
+		
+		padding: 0;
+		
+	}
+	
+	div#tweeter-box div#tweets a {
+		
+		color: #00FF00;
+		
+	}
+	
+	div#tweeter-box div#tweets div.tweet {
+		
+		background: none;
+		
+		border: 1px dotted #FFFFFF;
+		
+		border-width: 0 0 1px;
+		
+		margin: 0;
+		
+	}
+	
+	div#tweeter-box div.info {
+		
+		margin-top: -2px;
+		
+	}
+	
+	div#tweeter-box div.title {
+		
+		font-weight: normal;
+		
+	}
+	
+	div#tweeter-box div.error {
+		
+		padding: 5px;
+		
+	}

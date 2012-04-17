@@ -1,0 +1,300 @@
+div#follow {
+	
+	position: absolute;
+	
+	right: 10px;
+	
+	top: 16px;
+	
+}
+
+div#tweeter-box {
+	
+	/* DO NOT set explicit height on this element.  Set it on #tweets. */
+	
+	background: #FFBD9C;
+	
+	border: 1px solid #111111;
+	
+	border-radius: 20px;
+	
+	-moz-border-radius: 20px;
+	
+	-webkit-border-radius: 20px;
+	
+	-o-border-radius: 20px;
+	
+	-ms-border-radius: 20px;
+	
+	-khtml-border-radius: 20px;
+	
+	color: #333333;
+	
+	display: none;
+	
+	font: 13px 'Helvetica Neue', Arial, 'Liberation Sans',FreeSans,sans-serif;
+	
+	height: auto;
+	
+	margin-bottom: 15px;
+	
+	min-width: 215px;
+	
+	padding: 10px 0;
+	
+	position: relative
+	
+}
+	
+	div#tweeter-box a {
+		
+		color: #F96B02;
+		
+		text-decoration: none;
+		
+	}
+	
+	div#tweeter-box div#tweet-container {
+		
+		margin: 0;
+		
+	}
+	
+	div#tweeter-box a:hover {
+		
+		text-decoration: underline;
+		
+	}
+	
+	div#tweeter-box a.name {
+		
+		color: #019AD2;
+		
+		font-size: 16px;
+		
+		font-weight: bold;
+		
+	}
+	
+	div#tweeter-box div#tweet-container {
+		/*
+		margin: 0 10px 0 -10px;
+		*/
+		position: relative;
+		
+	}
+	
+	div#tweeter-box div#tweets {
+		
+		background: #FFFFFF;
+		
+		border: 1px solid #111111;
+		
+		border-width: 1px 0;
+		
+		font-size: 13px;
+		
+		line-height: 21px;
+		
+		margin: 10px 0;
+		
+		min-height: 100px;
+		
+		overflow: auto;
+		
+		padding: 10px;
+		
+		position: relative;
+		
+		text-align: left;
+		
+	}
+		
+		div#tweeter-box div#tweets div.links {
+			
+			font-size: 9px;
+			
+		}
+		
+		div#tweeter-box div#tweets div.links a {
+			
+		}
+		
+		div#tweeter-box div#tweets div.padder {
+			
+			height: 50px;
+			
+		}
+		
+		div#tweeter-box div#tweets div.tweet {
+			
+			background: #E8F4FF;
+			
+			border: 2px outset #70BBFF;
+			
+			margin: 0 0 9px;
+			
+			padding: 5px;
+			
+		}
+		
+		div#tweeter-box.webkit div#tweets div.tweet {
+			
+			border-color: #BBFFFF;
+			
+		}
+		
+			div#tweeter-box div#tweets div.tweet div.text {
+				
+			}
+		
+		div#tweeter-box div#tweets span {
+			
+			color: #730000;
+			
+		}
+	
+	div#tweeter-box div.error {
+		
+		color: #FF0000;
+		
+		font-weight: bold;
+		
+		text-align: justify;
+		
+	}
+	
+	div#tweeter-box div.overlay {
+		
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjBDMzlBRkExODdBNjExRTFCQTRDQjM2QUMzNDAxNDU4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjBDMzlBRkEyODdBNjExRTFCQTRDQjM2QUMzNDAxNDU4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MEMzOUFGOUY4N0E2MTFFMUJBNENCMzZBQzM0MDE0NTgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MEMzOUFGQTA4N0E2MTFFMUJBNENCMzZBQzM0MDE0NTgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7vStFgAAAAG0lEQVR42mJkYGDYz0AEYGIgEowqpI5CgAADAECXANMkR7VoAAAAAElFTkSuQmCC');
+		
+		height: 100%;
+		
+		left: 0;
+		
+		position: absolute;
+		
+		top: 0;
+		
+		width: 100%;
+		
+		z-index: 1;
+		
+	}
+		
+		div#tweeter-box div.overlay div.counter {
+			
+			color: #FFFFFF;
+			
+			font-weight: bold;
+			
+			left: 50%;
+			
+			margin-left: -77px;
+			
+			margin-top: 20px;
+			
+			position: absolute;
+			
+			top: 50%;
+			
+		}
+		
+		div#tweeter-box div.overlay img {
+			
+			left: 50%;
+			
+			margin-left: -21px;
+			
+			margin-top: -19px;
+			
+			position: relative;
+			
+			top: 50%;
+			
+		}
+	
+	div#tweeter-box div.stopper {
+		
+		bottom: 12px;
+		
+		font-size: 11px;
+		
+		font-weight: bold;
+		
+		position: absolute;
+		
+		right: 10px;
+		
+	}
+		
+		div#tweeter-box div.stopper input[type='checkbox'] {
+			
+			height: 13px;
+			
+			margin: 0;
+			
+			padding: 0;
+			
+			position: relative;
+			
+			top: -1px;
+			
+			vertical-align: bottom;
+			
+			width: 13px;
+			
+		}
+		
+		div#tweeter-box div.stopper label {
+			
+			padding-left: 4px;
+			
+			text-indent: -15px;
+			
+		}
+	
+	div#tweeter-box div.bottom,
+	div#tweeter-box div.top {
+		
+		padding: 0 10px;
+		
+	}
+	
+	div#tweeter-box div.info {
+		
+		float: left;
+		
+	}
+	
+	div#tweeter-box div.title {
+		
+		font-size: 11px;
+		
+		font-weight: bold;
+		
+	}
+	
+	div#tweeter-box img#profile {
+		
+		margin-right: 10px;
+		
+	}
+
+.clear {
+	
+	clear: both;
+	
+}
+
+.left {
+	
+	float: left;
+	
+}
+
+.right {
+	
+	float: right;
+	
+}

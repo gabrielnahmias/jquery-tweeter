@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tweeter Example</title>
+
+<script language="javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+
+<script language="javascript" src="jquery.tweeter.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+Be sure to check out the source code of this page to see how it all works!
+
+<br />
+<br /><div id="twitter"></div>
+
+<script language="javascript" type="text/javascript">
+
+// Of course, you could leave out all the options below and simple call .tweeter() and everything
+// would still be fine (but different).
+
+$("#twitter").tweeter( {
+	
+	account: "twitterapi",
+	count: 2,
+	height: 200,
+	retweets: true,
+	theme: "original",
+	transition: "slide bounce",
+	width: 250
+	
+} );
+
+</script>
+
+</body>
+
+</html>
