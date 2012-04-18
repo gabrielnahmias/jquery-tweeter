@@ -1,4 +1,4 @@
-Tweeter	<img alt="Tweetster, the Tweeter Mascot" src="http://i44.tinypic.com/2jbqngy.png" class="boxed-group" title="Tweetster, the Tweeter Mascot" />
+Tweeter	<img alt="Tweetster, the Tweeter Mascot" src="http://terrasoft.x10.mx/img/tweetster.png" title="Tweetster, the Tweeter Mascot" />
 =============
 
 **Tweeter** is a **jQuery _plugin_** that easily enables any site to have a live feed of Twitter updates right on their page.  It allows for themes (the original Twitter Profile Widget look and feel is included as a bonus), several different options, and contains/includes most resources right inside the script itself (to reduce setup hassle).
@@ -27,7 +27,7 @@ Now that that incredibly laborious task is accomplished, we can plod along to th
 
 There are 11 available options you can set when using Tweeter, and they are:
 
-1.  **account** (default: "twitter") - a string containing the account (what you you log in with) from which you want to stream tweets.
+1.  **account** (default: "twitterapi") - a string containing the account (what you you log in with) from which you want to stream tweets.
 2.  **count** (default: 10) - how many tweets to pull (not including retweets and replies).
 3.  **cssDir** (default: "css") - the directory the CSS for Tweeter will be stored.
 4.  **height** (default: 0 [or auto]) - integer to set an explicit height.  Tweeter will fit its container by default.
