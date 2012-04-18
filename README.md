@@ -35,7 +35,7 @@ There are 11 available options you can set when using Tweeter, and they are:
 6.  **retweets** (default: false) - load retweets along with tweets.
 7.  **speed** (default: 1000ms) - general speed of UI animations.
 8.  **theme** (default: none) - the name of a theme to load (from the path specified by cssDir).  The format of a Tweeter theme CSS file is **tweeter-theme-NAME.css**.  **NOTE:** don't include **.css** when specifying this option (i.e., to change the theme to the original Twitter Profile Widget's look, you set this to **"original"**).
-9.  **transition** (default: none) - either *slide* or *fade* *plus* any of the **jQuery Easing Plugin**'s choices in simplified format (i.e., *easeOutBounce* is just *bounce*, *easeOutElastic* is *elastic*, and so on).  Example: **slide bounce**
+9.  **transition** (default: none) - either *slide* or *fade* *plus* any of the **jQuery Easing Plugin**'s choices in simplified format.  (i.e., *easeOutBounce* is just *bounce*, *easeOutElastic* is *elastic*, and so on).  Example: **"slide bounce"**
 10.  **updateInterval** (default: 60000ms) - how often to check if there is a more recent tweet.
 11.  **width** (default: 0 [or "auto"]) - integer to set an explicit width.
 
