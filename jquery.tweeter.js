@@ -9,8 +9,7 @@
   */
 
 // I need to do some major rehauling of this already (sad to say).  Refer to the following article to find
-// best practices, etc.:
-// http://docs.jquery.com/Plugins/Authoring
+// best practices, etc.: http://docs.jquery.com/Plugins/Authoring
 
 ( function($) {
 	
