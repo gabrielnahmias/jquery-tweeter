@@ -119,7 +119,7 @@ div#tweeter-box {
 		div#tweeter-box div#tweets div.links a {
 			
 		}
-		
+			
 		div#tweeter-box div#tweets div.padder {
 			
 			height: 50px;
@@ -260,12 +260,24 @@ div#tweeter-box {
 		padding: 0 10px;
 		
 	}
-	
-	div#tweeter-box div.bottom img {
 		
-		vertical-align: top;
+		div#tweeter-box div.bottom a.tiny {
+			
+			bottom: 2px;
+			
+			font-size: 9px;
+			
+			left: 12px;
+			
+			position: absolute;
+			
+		}
 		
-	}
+		div#tweeter-box div.bottom img {
+			
+			vertical-align: top;
+			
+		}
 	
 	div#tweeter-box div.info {
 		
