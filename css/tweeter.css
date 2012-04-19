@@ -216,11 +216,13 @@ div#tweeter-box {
 	
 	div#tweeter-box div.stopper {
 		
-		bottom: 12px;
+		bottom: 50%;
 		
 		font-size: 11px;
 		
 		font-weight: bold;
+		
+		margin-bottom: -7px;
 		
 		position: absolute;
 		
@@ -260,14 +262,22 @@ div#tweeter-box {
 		padding: 0 10px;
 		
 	}
+	
+	div#tweeter-box div.bottom {
+		
+		height: 20px;
+		
+		position: relative;
+		
+	}
 		
 		div#tweeter-box div.bottom a.tiny {
 			
-			bottom: 2px;
+			bottom: 50%;
 			
 			font-size: 9px;
 			
-			left: 12px;
+			margin-bottom: -14px;
 			
 			position: absolute;
 			
@@ -275,7 +285,11 @@ div#tweeter-box {
 		
 		div#tweeter-box div.bottom img {
 			
-			vertical-align: top;
+			bottom: 50%;
+			
+			position: absolute;
+			
+			margin-bottom: -5px;
 			
 		}
 	
