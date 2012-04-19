@@ -81,7 +81,7 @@
 		
 		// Add the HTML necessary for the plugin to the element.
 		
-		$Body = $('<div id="tweeter-box"> <div class="top"> <a class="name" href="' + sAccountURL + '" target="_blank"><img class="left elem-left" id="profile" src="https://api.twitter.com/1/users/profile_image?screen_name=' + this.oSettings.account + '" width="32" /></a> <div class="info"> <div class="title"> </div> <a class="name" href="' + sAccountURL + '" target="_blank" title="Check out ' + possessive(this.oSettings.account) + ' Profile on Twitter">' + this.oSettings.account + '</a> </div> <div id="follow" class="right"> <a href="' + sAccountURL + '" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false" data-lang="en"></a> </div> </div> <div class="clear"></div> <div id="tweet-container"> <div class="overlay"> ' + baseImg("gif", this.o64.load) + ' <div class="counter"> </div> </div> <div id="tweets"> </div> </div> <div class="bottom"> <a href="http://www.terrasoftlabs.com" target="_blank" title="A Terrasoft Product">' + baseImg("png", this.o64.logo) + '</a> <div class="stopper"> <input id="stop-tweets" type="checkbox" checked="checked" /><label for="stop-tweets">Load New Tweets</label> </div> </div> </div>').addClass( ( (bWK) ? "webkit" : "" ) );
+		$PluginBody = $('<div id="tweeter-box"> <div class="top"> <a class="name" href="' + sAccountURL + '" target="_blank"><img class="left elem-left" id="profile" src="https://api.twitter.com/1/users/profile_image?screen_name=' + this.oSettings.account + '" width="32" /></a> <div class="info"> <div class="title"> </div> <a class="name" href="' + sAccountURL + '" target="_blank" title="Check out ' + possessive(this.oSettings.account) + ' Profile on Twitter">' + this.oSettings.account + '</a> </div> <div id="follow" class="right"> <a href="' + sAccountURL + '" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false" data-lang="en"></a> </div> </div> <div class="clear"></div> <div id="tweet-container"> <div class="overlay"> ' + baseImg("gif", this.o64.load) + ' <div class="counter"> </div> </div> <div id="tweets"> </div> </div> <div class="bottom"> <a href="http://www.terrasoftlabs.com" target="_blank" title="A Terrasoft Product">' + baseImg("png", this.o64.logo) + '</a> <div class="stopper"> <input id="stop-tweets" type="checkbox" checked="checked" /><label for="stop-tweets">Load New Tweets</label> </div> </div> </div>').addClass( ( (bWK) ? "webkit" : "" ) );
 		
 		// Write name to appropriate DIV (gotta fix the error that if the rate limit has been exceeded
 		// this fails to run).
@@ -105,18 +105,18 @@
 		// Set explicit dimensions if specified.
 		
 		if (this.oSettings.height != 0)
-			$Body.find("#tweets").height(this.oSettings.height);
+			$PluginBody.find("#tweets").height(this.oSettings.height);
 		
 		if (this.oSettings.width != 0)
-			$Body.width(this.oSettings.width);
+			$PluginBody.width(this.oSettings.width);
 		
-		$Body.delay(1000).appendTo(this);
+		$PluginBody.delay(1000).appendTo(this);
 		
 		if (this.oSettings.transition == "none" ||
 			typeof this.oSettings.transition === "undefined" ||
 			this.oSettings.transition.trim() == "" )
 			
-			$Body.css("display", "block");
+			$PluginBody.css("display", "block");
 			
 		else {
 			
@@ -144,9 +144,9 @@
 				sType = "easeOutBounce";
 				
 			if (sHow == "slide")
-				$Body.slideDown(this.oSettings.speed, sFullType);
+				$PluginBody.slideDown(this.oSettings.speed, sFullType);
 			else
-				$Body.fadeIn(this.oSettings.speed, sFullType);
+				$PluginBody.fadeIn(this.oSettings.speed, sFullType);
 			
 		}
 		
