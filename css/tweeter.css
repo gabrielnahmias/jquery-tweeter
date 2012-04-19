@@ -261,6 +261,12 @@ div#tweeter-box {
 		
 	}
 	
+	div#tweeter-box div.bottom img {
+		
+		vertical-align: top;
+		
+	}
+	
 	div#tweeter-box div.info {
 		
 		float: left;
