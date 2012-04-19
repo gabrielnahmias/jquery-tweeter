@@ -22,9 +22,13 @@ div#tweeter-box {
 	
 }
 	
-	div#tweeter-box a.name {
+	div#tweeter-box a {
 		
-		color: white;
+		color: #FFFFFF;
+		
+	}
+	
+	div#tweeter-box a.name {
 		
 		font-weight: normal;
 		
