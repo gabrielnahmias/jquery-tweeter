@@ -43,10 +43,10 @@
 		
 		var self = this;
 		
-		var $Box = this.find("#tweeter-box");
-		var $Stop = $Box.find("#stop-tweets");
-		var $Tweets = $Box.find("#tweets");
-		var $Ol = $Box.find(".overlay");
+		var $PluginBox = this.find("#tweeter-box");
+		var $Stop = $PluginBox.find("#stop-tweets");
+		var $Tweets = $PluginBox.find("#tweets");
+		var $Ol = $PluginBox.find(".overlay");
 		
 		var bEnd = false;
 		var bStop = false;
