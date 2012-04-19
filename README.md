@@ -78,6 +78,7 @@ Browser support
 
 * Google **Chrome**
 * Mozilla **Firefox** 3+
+* IE 7+
 * Others as of yet untested (help me out!)
 
 License
