@@ -307,6 +307,12 @@ div#tweeter-box {
 		
 	}
 	
+	div#tweeter-box img {
+		
+		border: none;
+		
+	}
+	
 	div#tweeter-box img#profile {
 		
 		margin-right: 10px;
