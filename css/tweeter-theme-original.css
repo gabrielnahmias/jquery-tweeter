@@ -84,6 +84,12 @@ div#tweeter-box {
 		
 	}
 	
+	div#tweeter-box div.stopper input[type='checkbox'] {
+		
+		top: 0;
+		
+	}
+	
 	div#tweeter-box div.title {
 		
 		font-weight: normal;
