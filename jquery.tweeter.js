@@ -529,7 +529,12 @@
 						
 						$($Time.selector).html(sMsg);
 						
-						$Tweets.children().remove().end().append( error('You have ' + sPhrase + ' the maximum amount of tweet requests per hour' + ( (iHits) ? ' (you have <span id="hits-left"></span> left)' : "" ) +'.  You have <span id="time-left"></span> left until you can retrieve tweets.') ).glow("FF0000");
+						$Tweets.children().remove().end().append( error('You have ' + sPhrase + ' the maximum amount of tweet requests per hour' + ( (iHits) ? ' (you have <span id="hits-left"></span> left)' : "" ) +'.  You have <span id="time-left"></span> left until you can retrieve tweets.') )
+						
+						// For some reason, glow doesn't work in IE.
+						
+						if (!$.browser.msie)
+							$Tweets.glow("FF0000");
 						
 						$Ol.hide();
 						
@@ -657,7 +662,12 @@
 				
 				$($Ol.selector).fadeOut();
 				
-				$Tweets.append( error('Error loading tweets!') ).glow("FF0000");
+				$Tweets.append( error('Error loading tweets!') );
+				
+				// For some reason, glow doesn't work in IE.
+				
+				if (!$.browser.msie)
+					$Tweets.glow("FF0000");
 				
 				changeUpdater(false);
 				
