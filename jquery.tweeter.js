@@ -20,7 +20,7 @@
 			account: "twitter",
 			count: 10,
 			cssDir: "css",
-			height: 0,
+			height: 200,
 			replies: false,
 			retweets: false,
 			speed: 1000,
@@ -104,13 +104,21 @@
 		
 		// Set explicit dimensions if specified.
 		
-		if (this.oSettings.height != 0)
-			$PluginBody.find("#tweets").height(this.oSettings.height);
+		var iHeight, iWidth;
 		
-		if (this.oSettings.width != 0)
-			$PluginBody.width(this.oSettings.width);
+		if (this.oSettings.height > 0)
+			iHeight = this.oSettings.height;
+		else
+			iHeight = "auto";
 		
-		$PluginBody.delay(1000).appendTo(this);
+		if (this.oSettings.width > 0)
+			iWidth = this.oSettings.width;
+		else
+			iWidth = "auto";
+		
+		// The delay is here because the element isn't added to the DOM quickly enough it seems.
+		
+		$PluginBody.find("#tweets").height(iHeight).end().width(iWidth).delay(1000).appendTo(this);
 		
 		if (this.oSettings.transition == "none" ||
 			typeof this.oSettings.transition === "undefined" ||
