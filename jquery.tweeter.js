@@ -161,8 +161,10 @@
 			if ( !$.easing.hasOwnProperty(sFullType) )
 				sType = "easeOutBounce";
 			
+			var $Bottom = $PluginBody.find(".bottom");
+			
 			if (this.oSettings.transition != "none")
-				$PluginBody.find(".bottom").css("opacity", 0);
+				$Bottom.css("opacity", 0);
 			
 			if (sHow == "slide")
 				$PluginBody.slideDown(this.oSettings.speed, sFullType);
@@ -171,7 +173,7 @@
 			
 			if (this.oSettings.transition != "none") {
 				
-				$PluginBody.find(".bottom").delay(this.oSettings.speed * 2).animate( {
+				$Bottom.delay(this.oSettings.speed * 2).animate( {
 					
 					opacity: 1
 					
@@ -491,11 +493,9 @@
 											
 											loadTweets();
 											
-										} else {
-											
-											$Ol.find(".counter").html( $("#tweets div.tweet").length + " total tweets loaded").end().delay(500).fadeOut();
-											
 										}
+										
+										$Ol.find(".counter").html( $("#tweets div.tweet").length + " total tweets loaded").end().delay(500).fadeOut();
 										
 									}
 									
