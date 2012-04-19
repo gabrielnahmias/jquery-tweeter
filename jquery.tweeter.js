@@ -114,11 +114,15 @@
 		
 		if (this.oSettings.transition == "none" ||
 			typeof this.oSettings.transition === "undefined" ||
-			this.oSettings.transition.trim() == "" )
+			this.oSettings.transition.trim() == "" ) {
 			
 			$PluginBody.css("display", "block");
 			
-		else {
+			// Make it so we don't have to check so many conditions in the future.
+			
+			this.oSettings.transition = "none";
+			
+		} else {
 			
 			var aDetails = this.oSettings.transition.split(" ");
 			
@@ -142,11 +146,24 @@
 			
 			if ( !$.easing.hasOwnProperty(sFullType) )
 				sType = "easeOutBounce";
-				
+			
+			if (this.oSettings.transition != "none")
+				$PluginBody.find(".bottom").css("opacity", 0);
+			
 			if (sHow == "slide")
 				$PluginBody.slideDown(this.oSettings.speed, sFullType);
 			else
 				$PluginBody.fadeIn(this.oSettings.speed, sFullType);
+			
+			if (this.oSettings.transition != "none") {
+				
+				$PluginBody.find(".bottom").delay(this.oSettings.speed * 2).animate( {
+					
+					opacity: 1
+					
+				} , this.oSettings.speed);
+			
+			}
 			
 		}
 		
