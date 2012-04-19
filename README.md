@@ -11,6 +11,7 @@ What does it do?
 * Loads tweets from a Twitter account into any specified element.
 * Continuously checks if there are newer tweets and if so, loads them (can be toggled with checkbox).
 * Removes the need to load stylesheets separately (it does all this on its own).
+* Allows customization for WebKit browsers through the <code>.webkit</code> CSS class.
 * Dazzles your friends.
 
 How to use it&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="Tweetster, the Tweeter Mascot" src="http://terrasoft.x10.mx/img/tweetster.png" title="Tweetster, the Tweeter Mascot" />
