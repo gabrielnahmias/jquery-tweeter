@@ -1,12 +1,12 @@
 /**
-  * Tweeter v1.0.0
-  * http://github.com/terrasoftlabs/tweeter
-  *
-  * Copyright © 2012 Gabriel Nahmias.
-  * Free to use under the MIT license.
-  * http://www.opensource.org/licenses/mit-license.php
-  *
-  */
+ * Tweeter v1.0.0
+ * http://github.com/terrasoftlabs/tweeter
+ *
+ * Copyright © 2012 Gabriel Nahmias.
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ */
 
 // I need to do some major rehauling of this already (sad to say).  Refer to the following article to find
 // best practices, etc.: http://docs.jquery.com/Plugins/Authoring
