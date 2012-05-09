@@ -1,6 +1,6 @@
 /**
  * Tweeter v1.0.0
- * http://github.com/terrasoftlabs/tweeter
+ * http://github.com/terrasoftlabs/jquery-tweeter
  *
  * Copyright © 2012 Gabriel Nahmias.
  * Free to use under the MIT license.
