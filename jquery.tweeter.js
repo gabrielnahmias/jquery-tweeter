@@ -124,7 +124,12 @@
 		
 		// The delay is here because the element isn't added to the DOM quickly enough it seems.
 		
-		$PluginBody.find("#tweets").height(iHeight).end().width(iWidth).delay(1000).appendTo(this);
+		$PluginBody.find("#tweets").height(iHeight)
+				   .end()
+				   .hide()
+				   .width(iWidth)
+				   .delay(1000)
+				   .appendTo(this);
 		
 		if (this.oSettings.transition == "none" ||
 			typeof this.oSettings.transition === "undefined" ||
