@@ -1,5 +1,5 @@
-/**
- * Tweeter v1.0.1
+/*!
+ * Tweeter v1.0.2
  * http://github.com/terrasoftlabs/jquery-tweeter
  *
  * Copyright © 2012 Gabriel Nahmias.
@@ -131,6 +131,13 @@
 				   .delay(1000)
 				   .appendTo(this);
 		
+		// Fix on 6/20/2012 11:42 AM
+		//	Detect if the parent element is hidden and show it if so.  Need to add an .each() loop
+		//	in combination with .parents() or something to make sure every parent is shown.
+		
+		if ( $PluginBody.parent().is(":hidden") )
+			$PluginBody.parent().show();
+		
 		if (this.oSettings.transition == "none" ||
 			typeof this.oSettings.transition === "undefined" ||
 			this.oSettings.transition.trim() == "" ) {
@@ -170,7 +177,7 @@
 			
 			if (this.oSettings.transition != "none")
 				$Bottom.css("opacity", 0);
-			
+				
 			if (sHow == "slide")
 				$PluginBody.slideDown(this.oSettings.speed, sFullType);
 			else
