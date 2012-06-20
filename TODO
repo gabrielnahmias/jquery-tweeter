@@ -1,1 +1,2 @@
 Make load tweets box hover state have pointer cursor
+Fix display jump with transitionless appearance
