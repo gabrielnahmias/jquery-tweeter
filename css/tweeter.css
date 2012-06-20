@@ -160,6 +160,10 @@ div#tweeter-box {
 		
 		font-weight: bold;
 		
+		line-height: 2em !important;
+		
+		padding: 5px 20px !important;
+		
 		text-align: justify;
 		
 	}
