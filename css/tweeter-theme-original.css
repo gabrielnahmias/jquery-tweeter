@@ -78,6 +78,10 @@ div#tweeter-box {
 		
 	}
 	
+	div#tweeter-box div#tweets span {
+		color: #E66969;
+	}
+	
 	div#tweeter-box div.info {
 		
 		margin-top: -2px;
@@ -101,3 +105,4 @@ div#tweeter-box {
 		padding: 5px;
 		
 	}
+	
