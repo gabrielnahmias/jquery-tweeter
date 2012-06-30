@@ -99,8 +99,21 @@
 		
 		addStylesheet("tweeter");
 		
-		if (this.oSettings.theme != "")
-			addStylesheet("tweeter-theme-" + this.oSettings.theme);
+		if (this.oSettings.theme != "") {
+		
+		var sTheme = this.oSettings.theme;
+			
+			var aThemes = sTheme.split(" ");
+			
+			for (t in aThemes) {
+				
+				var sCurrent = aThemes[t];
+				
+				addStylesheet("tweeter-theme-" + sCurrent);
+				
+			}
+			
+		}
 		
 		// Add the HTML necessary for the plugin to the element.
 		
