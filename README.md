@@ -26,19 +26,20 @@ Of course, before doing anything, you must include **jQuery** (can't do it for y
 
 Now that that incredibly laborious task is accomplished, we can plod along to the easy stuff.
 
-There are 11 available options you can set when using Tweeter, and they are:
+There are 12 available options you can set when using Tweeter, and they are:
 
 1.  **account** (default: "twitterapi") - a string containing the account (what you you log in with) from which you want to stream tweets.
 2.  **count** (default: 10) - how many tweets to pull (not including retweets and replies).
 3.  **cssDir** (default: "css") - the directory the CSS for Tweeter will be stored.
 4.  **height** (default: 200 [0 sets to auto]) - integer to set an explicit height (this applies to the tweet area not the total height of the box).
-5.  **replies** (default: false) - load replies along with tweets.
-6.  **retweets** (default: false) - load retweets along with tweets.
-7.  **speed** (default: 1000ms) - general speed of UI animations.
-8.  **theme** (default: none) - the name of a theme to load (from the path specified by cssDir).  The format of a Tweeter theme CSS file is **tweeter-theme-NAME.css**.  **NOTE:** don't include **.css** when specifying this option (i.e., to change the theme to the original Twitter Profile Widget's look, you set this to **"original"**).  **UPDATE (6/30/2012):** *You can now specify multiple themes by way of spaces (this means no spaces in theme names [use underscores]).*  Each consecutive theme (left to right) overwrites previous styles.
-9.  **transition** (default: none) - either *slide* or *fade* *plus* any of the **jQuery Easing Plugin**'s choices in simplified format.  (i.e., *easeOutBounce* is just *bounce*, *easeOutElastic* is *elastic*, and so on).  It can also be **"none"** (or simply **""**) to automatically appear.  Example: **"slide bounce"**
-10.  **updateInterval** (default: 60000ms) - how often to check if there is a more recent tweet.
-11.  **width** (default: 0 [or "auto"]) - integer to set an explicit width.  Tweeter will fit its container by default.
+5.  **parseHidden** (default: false) - allows certain tweets with `#HIDDEN#` somewhere in them to not be listed.
+6.  **replies** (default: false) - load replies along with tweets.
+7.  **retweets** (default: false) - load retweets along with tweets.
+8.  **speed** (default: 1000ms) - general speed of UI animations.
+9.  **theme** (default: none) - the name of a theme to load (from the path specified by cssDir).  The format of a Tweeter theme CSS file is **tweeter-theme-NAME.css**.  **NOTE:** don't include **.css** when specifying this option (i.e., to change the theme to the original Twitter Profile Widget's look, you set this to **"original"**).  **UPDATE (6/30/2012):** *You can now specify multiple themes by way of spaces (this means no spaces in theme names [use underscores]).*  Each consecutive theme (left to right) overwrites previous styles.
+10.  **transition** (default: none) - either *slide* or *fade* *plus* any of the **jQuery Easing Plugin**'s choices in simplified format.  (i.e., *easeOutBounce* is just *bounce*, *easeOutElastic* is *elastic*, and so on).  It can also be **"none"** (or simply **""**) to automatically appear.  Example: **"slide bounce"**
+11.  **updateInterval** (default: 60000ms) - how often to check if there is a more recent tweet.
+12.  **width** (default: 0 [or "auto"]) - integer to set an explicit width.  Tweeter will fit its container by default.
 
 Examples
 -----------
@@ -63,6 +64,7 @@ $("#twitter").tweeter( {
 	account: "twitterapi",
 	count: 20,
 	height: 200,
+	parseHidden: true,
 	retweets: true,
 	theme: "original",
 	transition: "slide bounce",
