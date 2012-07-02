@@ -21,6 +21,7 @@
 			count: 10,
 			cssDir: "css",
 			height: 200,
+			parseHidden: false,
 			replies: false,
 			retweets: false,
 			speed: 1000,
@@ -87,13 +88,13 @@
 				
 				success: function(data) {
 					
-					$('#tweeter-box .title').html(data.name)
+					$('#tweeter-box .title').html(data.name);
 					
 				},
 				
 			} );
 			
-		}
+		};
 		
 		// Load the proper stylesheets.
 		
@@ -498,7 +499,16 @@
 											if ( $PluginBox.find(".title").text() == "" )
 												displayName();
 											
-											addTweet(post.text, post.id_str, post.created_at, false, sAuthor);
+											if ( self.oSettings.parseHidden ) {
+												
+												if ( post.text.indexOf("#HIDDEN#") == -1 )
+													addTweet(post.text, post.id_str, post.created_at, false, sAuthor);
+												
+											} else {
+												
+												addTweet(post.text, post.id_str, post.created_at, false, sAuthor);
+												
+											}
 											
 										} );
 										
