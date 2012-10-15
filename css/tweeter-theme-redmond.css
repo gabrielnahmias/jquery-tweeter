@@ -1,8 +1,8 @@
-div#tweeter-box {
+.tweeter-container {
     background: #597FC5;
 	border: 1px solid #152E57;
 }
-div#tweeter-box div#tweets {
+.tweeter-container #tweets {
 	background: #FFFFFF !important;
 	border-color: #152E57;
 	color: #333333;

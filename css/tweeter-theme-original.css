@@ -1,4 +1,4 @@
-div#tweeter-box {
+.tweeter-container {
 	
 	background: #333333;
 	
@@ -22,13 +22,13 @@ div#tweeter-box {
 	
 }
 	
-	div#tweeter-box a {
+	.tweeter-container a {
 		
 		color: #FFFFFF;
 		
 	}
 	
-	div#tweeter-box a.name {
+	.tweeter-container a.name {
 		
 		color: #FFFFFF;
 		
@@ -36,7 +36,7 @@ div#tweeter-box {
 		
 	}
 	
-	div#tweeter-box div#tweets {
+	.tweeter-container #tweets {
 		
 		background: #000000;
 		
@@ -60,13 +60,13 @@ div#tweeter-box {
 		
 	}
 	
-	div#tweeter-box div#tweets a {
+	.tweeter-container #tweets a {
 		
 		color: #00FF00;
 		
 	}
 	
-	div#tweeter-box div#tweets div.tweet {
+	.tweeter-container #tweets .tweet {
 		
 		background: none;
 		
@@ -78,29 +78,29 @@ div#tweeter-box {
 		
 	}
 	
-	div#tweeter-box div#tweets span {
+	.tweeter-container #tweets span {
 		color: #E66969;
 	}
 	
-	div#tweeter-box div.info {
+	.tweeter-container .info {
 		
 		margin-top: -2px;
 		
 	}
 	
-	div#tweeter-box div.stopper input[type='checkbox'] {
+	.tweeter-container .stopper input[type='checkbox'] {
 		
 		top: 0;
 		
 	}
 	
-	div#tweeter-box div.title {
+	.tweeter-container .title {
 		
 		font-weight: normal;
 		
 	}
 	
-	div#tweeter-box div.error {
+	.tweeter-container .error {
 		
 		padding: 5px;
 		

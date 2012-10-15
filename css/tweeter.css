@@ -1,4 +1,4 @@
-div#follow {
+#follow {
 	
 	position: absolute;
 	
@@ -8,11 +8,11 @@ div#follow {
 	
 }
 
-div#tweeter-box {
+.tweeter-container {
 	
 	/* DO NOT set explicit height on this element.  Set it on #tweets. */
 	
-	background: #FFBD9C;
+	background: #146DA1;
 	
 	border: 1px solid #111111;
 	
@@ -28,7 +28,7 @@ div#tweeter-box {
 	
 	-khtml-border-radius: 20px;
 	
-	color: #333333;
+	color: #FFFFFF;
 	
 	display: none;
 	
@@ -46,29 +46,29 @@ div#tweeter-box {
 	
 }
 	
-	div#tweeter-box a {
+	.tweeter-container a {
 		
-		color: #F96B02;
+		color: #FFFFFF;
 		
 		text-decoration: none;
 		
 	}
 	
-	div#tweeter-box div#tweet-container {
+	.tweeter-container #tweet-container {
 		
 		margin: 0;
 		
 	}
 	
-	div#tweeter-box a:hover {
+	.tweeter-container a:hover {
 		
 		text-decoration: underline;
 		
 	}
 	
-	div#tweeter-box a.name {
+	.tweeter-container a.name {
 		
-		color: #019AD2;
+		color: #B8E4FD;
 		
 		font-size: 16px;
 		
@@ -76,7 +76,7 @@ div#tweeter-box {
 		
 	}
 	
-	div#tweeter-box div#tweet-container {
+	.tweeter-container #tweet-container {
 		/*
 		margin: 0 10px 0 -10px;
 		*/
@@ -84,7 +84,7 @@ div#tweeter-box {
 		
 	}
 	
-	div#tweeter-box div#tweets {
+	.tweeter-container #tweets {
 		
 		background: #FFFFFF;
 		
@@ -110,23 +110,23 @@ div#tweeter-box {
 		
 	}
 		
-		div#tweeter-box div#tweets div.links {
+		.tweeter-container #tweets .links {
 			
 			font-size: 9px;
 			
 		}
 		
-		div#tweeter-box div#tweets div.links a {
+		.tweeter-container #tweets .links a {
 			
 		}
 			
-		div#tweeter-box div#tweets div.padder {
+		.tweeter-container #tweets .padder {
 			
 			height: 50px;
 			
 		}
 		
-		div#tweeter-box div#tweets div.tweet {
+		.tweeter-container #tweets .tweet {
 			
 			background: #E8F4FF;
 			
@@ -138,23 +138,23 @@ div#tweeter-box {
 			
 		}
 		
-		div#tweeter-box.webkit div#tweets div.tweet {
+		.tweeter-container.webkit #tweets .tweet {
 			
 			border-color: #BBFFFF;
 			
 		}
 		
-			div#tweeter-box div#tweets div.tweet div.text {
+			.tweeter-container #tweets .tweet .text {
 				
 			}
 		
-		div#tweeter-box div#tweets span {
+		.tweeter-container #tweets span {
 			
 			color: #730000;
 			
 		}
 	
-	div#tweeter-box div.error {
+	.tweeter-container .error {
 		
 		color: #FF0000;
 		
@@ -168,7 +168,7 @@ div#tweeter-box {
 		
 	}
 	
-	div#tweeter-box div.overlay {
+	.tweeter-container .overlay {
 		
 		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjBDMzlBRkExODdBNjExRTFCQTRDQjM2QUMzNDAxNDU4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjBDMzlBRkEyODdBNjExRTFCQTRDQjM2QUMzNDAxNDU4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MEMzOUFGOUY4N0E2MTFFMUJBNENCMzZBQzM0MDE0NTgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MEMzOUFGQTA4N0E2MTFFMUJBNENCMzZBQzM0MDE0NTgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7vStFgAAAAG0lEQVR42mJkYGDYz0AEYGIgEowqpI5CgAADAECXANMkR7VoAAAAAElFTkSuQmCC');
 		
@@ -186,7 +186,7 @@ div#tweeter-box {
 		
 	}
 		
-		div#tweeter-box div.overlay div.counter {
+		.tweeter-container .overlay .counter {
 			
 			color: #FFFFFF;
 			
@@ -204,7 +204,7 @@ div#tweeter-box {
 			
 		}
 		
-		div#tweeter-box div.overlay img {
+		.tweeter-container .overlay img {
 			
 			left: 50%;
 			
@@ -218,7 +218,7 @@ div#tweeter-box {
 			
 		}
 	
-	div#tweeter-box div.stopper {
+	.tweeter-container .stopper {
 		
 		bottom: 50%;
 		
@@ -234,7 +234,7 @@ div#tweeter-box {
 		
 	}
 		
-		div#tweeter-box div.stopper input[type='checkbox'] {
+		.tweeter-container .stopper input[type='checkbox'] {
 			
 			height: 13px;
 			
@@ -252,7 +252,7 @@ div#tweeter-box {
 			
 		}
 		
-		div#tweeter-box div.stopper label {
+		.tweeter-container .stopper label {
 			
 			padding-left: 4px;
 			
@@ -260,14 +260,14 @@ div#tweeter-box {
 			
 		}
 	
-	div#tweeter-box div.bottom,
-	div#tweeter-box div.top {
+	.tweeter-container .bottom,
+	.tweeter-container .top {
 		
 		padding: 0 10px;
 		
 	}
 	
-	div#tweeter-box div.bottom {
+	.tweeter-container .bottom {
 		
 		height: 20px;
 		
@@ -275,7 +275,7 @@ div#tweeter-box {
 		
 	}
 		
-		div#tweeter-box div.bottom a.tiny {
+		.tweeter-container .bottom a.tiny {
 			
 			bottom: 50%;
 			
@@ -287,7 +287,7 @@ div#tweeter-box {
 			
 		}
 		
-		div#tweeter-box div.bottom img {
+		.tweeter-container .bottom img {
 			
 			bottom: 50%;
 			
@@ -297,13 +297,15 @@ div#tweeter-box {
 			
 		}
 	
-	div#tweeter-box div.info {
+	.tweeter-container .info {
 		
 		float: left;
 		
 	}
 	
-	div#tweeter-box div.title {
+	.tweeter-container .title {
+		
+		color: 
 		
 		font-size: 11px;
 		
@@ -311,13 +313,13 @@ div#tweeter-box {
 		
 	}
 	
-	div#tweeter-box img {
+	.tweeter-container img {
 		
 		border: none;
 		
 	}
 	
-	div#tweeter-box img#profile {
+	.tweeter-container img#profile {
 		
 		margin-right: 10px;
 		
