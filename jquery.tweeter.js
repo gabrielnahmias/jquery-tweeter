@@ -44,7 +44,7 @@
 		
 		var self = this;
 		
-		var $PluginBox = this.find("#tweeter-box");
+		var $PluginBox = this.find(".tweeter-container");
 		var $Stop = $PluginBox.find("#stop-tweets");
 		var $Tweets = $PluginBox.find("#tweets");
 		var $Ol = $PluginBox.find(".overlay");
@@ -65,30 +65,32 @@
 		
 		//console.debug(sURL)
 		
-		if ( !$.easing.hasOwnProperty("def") ) {
-			
-			// Add easing if it doesn't exist,
-			
-			eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('h.i[\'w\']=h.i[\'r\'];h.L(h.i,{v:\'u\',r:8(x,a,b,c,d){6 h.i[h.i.v](x,a,b,c,d)},u:8(x,a,b,c,d){6-c*(a/=d)*(a-2)+b},y:8(x,a,b,c,d){6 c*((a=a/d-1)*a*a+1)+b},B:8(x,a,b,c,d){6-c*((a=a/d-1)*a*a*a-1)+b},D:8(x,a,b,c,d){6 c*((a=a/d-1)*a*a*a*a+1)+b},K:8(x,a,b,c,d){6 c*9.t(a/d*(9.m/2))+b},z:8(x,a,b,c,d){6(a==d)?b+c:c*(-9.q(2,-o*a/d)+1)+b},P:8(x,a,b,c,d){6 c*9.I(1-(a=a/d-1)*a)+b},J:8(x,b,c,d,e){j s=1.n;j p=0;j a=d;f(b==0)6 c;f((b/=e)==1)6 c+d;f(!p)p=e*.3;f(a<9.C(d)){a=d;j s=p/4}l j s=p/(2*9.m)*9.E(d/a);6 a*9.q(2,-o*b)*9.t((b*e-s)*(2*9.m)/p)+d+c},F:8(x,a,b,c,d,s){f(s==G)s=1.n;6 c*((a=a/d-1)*a*((s+1)*a+s)+1)+b},H:8(x,a,b,c,d){f((a/=d)<(1/2.g)){6 c*(7.k*a*a)+b}l f(a<(2/2.g)){6 c*(7.k*(a-=(1.5/2.g))*a+.g)+b}l f(a<(2.5/2.g)){6 c*(7.k*(a-=(2.M/2.g))*a+.N)+b}l{6 c*(7.k*(a-=(2.O/2.g))*a+.A)+b}}});',52,52,'||||||return||function|Math||||||if|75|jQuery|easing|var|5625|else|PI|70158|10||pow|swing||sin|easeOutQuad|def|jswing||easeOutCubic|easeOutExponential|984375|easeOutQuart|abs|easeOutQuint|asin|easeOutBack|undefined|easeOutBounce|sqrt|easeOutElastic|easeOutSine|extend|25|9375|625|easeOutCircular'.split('|'),0,{}));
-		
-		}
-		
 		var displayName = function() {
 			
 			// Write name to appropriate DIV (gotta fix the error that if the rate limit has been exceeded
 			// this fails to run).
 			
+			var $title = $('.tweeter-container .title');
+			
 			$.ajax( {
 				
-				url: "http://twitter.com/users/show.json?screen_name=" + self.oSettings.account + "&callback=?",
+				url: "https://api.twitter.com/1/users/show.json?screen_name=" + self.oSettings.account + "&callback=?",
 				
 				async: false,
+				
+				error: function(data) {
+					
+					//$title.html("-----------");
+					
+					console.warn(data);
+					
+				},
 				
 				dataType: 'json',
 				
 				success: function(data) {
 					
-					$('#tweeter-box .title').html(data.name);
+					$title.html(data.name);
 					
 				},
 				
@@ -118,7 +120,7 @@
 		
 		// Add the HTML necessary for the plugin to the element.
 		
-		var $PluginBody = $('<div id="tweeter-box"> <div class="top"> <a class="name" href="' + sAccountURL + '" target="_blank"><img class="left elem-left" id="profile" src="https://api.twitter.com/1/users/profile_image?screen_name=' + this.oSettings.account + '" width="32" /></a> <div class="info"> <div class="title"> </div> <a class="name" href="' + sAccountURL + '" target="_blank" title="Check out ' + possessive(this.oSettings.account) + ' Profile on Twitter">' + this.oSettings.account + '</a> </div> <div id="follow" class="right"> <a href="' + sAccountURL + '" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false" data-lang="en"></a> </div> </div> <div class="clear"></div> <div id="tweet-container"> <div class="overlay"> ' + baseImg("gif", this.o64.load) + ' <div class="counter"> </div> </div> <div id="tweets"> </div> </div> <div class="bottom"> <a href="http://www.terrasoftlabs.com" target="_blank" title="A Terrasoft Product">' + baseImg("png", this.o64.logo) + '</a> <div class="stopper"> <input id="stop-tweets" type="checkbox" checked="checked" /><label for="stop-tweets">Load New Tweets</label> </div> <a class="tiny" href="https://github.com/terrasoftlabs/jquery-tweeter/" target="github" title="Visit GitHub Repository">repo</a> </div> </div>').addClass( ( (bWK) ? "webkit" : "" ) );
+		var $PluginBody = $('<div class="tweeter-container"> <div class="top"> <a class="name" href="' + sAccountURL + '" target="_blank"><img class="left elem-left" id="profile" src="https://api.twitter.com/1/users/profile_image?screen_name=' + this.oSettings.account + '" width="32" /></a> <div class="info"> <div class="title">-----------</div> <a class="name" href="' + sAccountURL + '" target="_blank" title="Check out ' + possessive(this.oSettings.account) + ' Profile on Twitter">' + this.oSettings.account + '</a> </div> <div id="follow" class="right"> <a href="' + sAccountURL + '" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false" data-lang="en"></a> </div> </div> <div class="clear"></div> <div id="tweet-container"> <div class="overlay"> ' + baseImg("gif", this.o64.load) + ' <div class="counter"> </div> </div> <div id="tweets"> </div> </div> <div class="bottom"> <a href="http://www.terrasoftlabs.com" target="_blank" title="A Terrasoft Product">' + baseImg("png", this.o64.logo) + '</a> <div class="stopper"> <input id="stop-tweets" type="checkbox" checked="checked" /><label for="stop-tweets">Load New Tweets</label> </div> <a class="tiny" href="https://github.com/terrasoftlabs/jquery-tweeter/" target="github" title="Visit GitHub Repository">repo</a> </div> </div>').addClass( ( (bWK) ? "webkit" : "" ) );
 		
 		displayName();
 		
@@ -782,6 +784,14 @@
 	}
 
 } )(jQuery);
+
+if ( !$.easing.hasOwnProperty("def") ) {
+	
+	// Add easing if it doesn't exist,
+	
+	eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('h.i[\'w\']=h.i[\'r\'];h.L(h.i,{v:\'u\',r:8(x,a,b,c,d){6 h.i[h.i.v](x,a,b,c,d)},u:8(x,a,b,c,d){6-c*(a/=d)*(a-2)+b},y:8(x,a,b,c,d){6 c*((a=a/d-1)*a*a+1)+b},B:8(x,a,b,c,d){6-c*((a=a/d-1)*a*a*a-1)+b},D:8(x,a,b,c,d){6 c*((a=a/d-1)*a*a*a*a+1)+b},K:8(x,a,b,c,d){6 c*9.t(a/d*(9.m/2))+b},z:8(x,a,b,c,d){6(a==d)?b+c:c*(-9.q(2,-o*a/d)+1)+b},P:8(x,a,b,c,d){6 c*9.I(1-(a=a/d-1)*a)+b},J:8(x,b,c,d,e){j s=1.n;j p=0;j a=d;f(b==0)6 c;f((b/=e)==1)6 c+d;f(!p)p=e*.3;f(a<9.C(d)){a=d;j s=p/4}l j s=p/(2*9.m)*9.E(d/a);6 a*9.q(2,-o*b)*9.t((b*e-s)*(2*9.m)/p)+d+c},F:8(x,a,b,c,d,s){f(s==G)s=1.n;6 c*((a=a/d-1)*a*((s+1)*a+s)+1)+b},H:8(x,a,b,c,d){f((a/=d)<(1/2.g)){6 c*(7.k*a*a)+b}l f(a<(2/2.g)){6 c*(7.k*(a-=(1.5/2.g))*a+.g)+b}l f(a<(2.5/2.g)){6 c*(7.k*(a-=(2.M/2.g))*a+.N)+b}l{6 c*(7.k*(a-=(2.O/2.g))*a+.A)+b}}});',52,52,'||||||return||function|Math||||||if|75|jQuery|easing|var|5625|else|PI|70158|10||pow|swing||sin|easeOutQuad|def|jswing||easeOutCubic|easeOutExponential|984375|easeOutQuart|abs|easeOutQuint|asin|easeOutBack|undefined|easeOutBounce|sqrt|easeOutElastic|easeOutSine|extend|25|9375|625|easeOutCircular'.split('|'),0,{}));
+
+}
 
 // These two jQuery extensions can come in handy if you want to use them elsewhere throughout your site.
 // The first one relies on the second, the second enabling textShadow animation.  The first takes 3 parameters
